@@ -3,9 +3,9 @@ import ReactHowler from "react-howler";
 import track from "/Users/joshuamm/Desktop/web development/new project/new-project/src/assets/Track1.mp3";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import play from "/Users/joshuamm/Desktop/web development/new project/new-project/src/assets/background-image/play_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg";
-import pause from "/Users/joshuamm/Desktop/web development/new project/new-project/src/assets/background-image/pause_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg";
-import restart from "/Users/joshuamm/Desktop/web development/new project/new-project/src/assets/background-image/restart_alt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+import play from "../../assets/background-image/play_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg";
+import pause from "../../assets/background-image/pause_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg";
+import restart from "../../assets/background-image/restart_alt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
 
 export default function Timer() {
     

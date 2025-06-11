@@ -1,9 +1,7 @@
 import './App.css';
-// import Navigation from './components/navigation.js';
 import Sidebar from './components/homepage/sidebar.js';
 import { Outlet,useLoaderData,redirect,Link,useLocation } from 'react-router-dom';
 import axios from 'axios';
-// import Welcome from './components/welcome.js';
 import { createContext, useEffect, useState} from 'react';
 import Navigation from './components/homepage/navigation.js';
 
