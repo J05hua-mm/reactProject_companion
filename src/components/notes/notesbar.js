@@ -28,7 +28,7 @@ try {
     "Content-Type": "application/x-www-form-urlencoded"
    }
   })
-  return redirect(`http://localhost:3000/topics/${params.topicid}/notes`);
+  return redirect(`/topics/${params.topicid}/notes`);
 }
 catch (err) {
   return err;
@@ -42,7 +42,7 @@ else if(data.type === "cardedit") {
       "Content-Type": "application/x-www-form-urlencoded"
      }
     })
-    return redirect(`http://localhost:3000/topics/${params.topicid}/notes`);
+    return redirect(`/topics/${params.topicid}/notes`);
   }
   catch (err) {
     return err;
@@ -57,7 +57,7 @@ else if(data.type === "Cardelete") {
       "Content-Type": "application/x-www-form-urlencoded"
      }
     })
-    return redirect(`http://localhost:3000/topics/${params.topicid}/notes`);
+    return redirect(`/topics/${params.topicid}/notes`);
   }
   catch (err) {
     return err;

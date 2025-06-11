@@ -34,7 +34,7 @@ export async function taskAction({params,request}) {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         });
-        return redirect(`http://localhost:3000/topics/${param}/tasks`);
+        return redirect(`/topics/${param}/tasks`);
     }
     catch(err) {
         return(err);
@@ -49,7 +49,7 @@ export async function taskAction({params,request}) {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         });
-        return redirect(`http://localhost:3000/topics/${param}/tasks`);
+        return redirect(`/topics/${param}/tasks`);
     }
     catch(err) {
         return(err);
@@ -64,7 +64,7 @@ export async function taskAction({params,request}) {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         });
-        return redirect(`http://localhost:3000/topics/${param}/tasks`);
+        return redirect(`/topics/${param}/tasks`);
     }
     catch(err) {
         return(err);
@@ -79,7 +79,7 @@ export async function taskAction({params,request}) {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         });
-        return redirect(`http://localhost:3000/topics/${param}/tasks`);
+        return redirect(`/topics/${param}/tasks`);
     }
     catch(err) {
         return(err);
