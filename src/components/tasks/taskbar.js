@@ -9,7 +9,7 @@ export async function taskLoader({params,request}) {
     console.log(param);
 
     try {
-        const response = await axios.get(`http://localhost:4000/topics/${param}/tasks`,{withCredentials:true});
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/topics/${param}/tasks`,{withCredentials:true});
         return response.data;
     }
     catch(err) {
@@ -28,7 +28,7 @@ export async function taskAction({params,request}) {
     if(data.type === "newtask") {
 
     try {
-        const response = await axios.post(`http://localhost:4000/${param}/newtask`,data,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/${param}/newtask`,data,{
             withCredentials:true,
             headers:{
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -43,7 +43,7 @@ export async function taskAction({params,request}) {
 }  else if(data.type === "checked") {
     
    try {
-        const response = await axios.post(`http://localhost:4000/${param}/task/${taskid}/checked`,data,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/${param}/task/${taskid}/checked`,data,{
             withCredentials:true,
             headers:{
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -58,7 +58,7 @@ export async function taskAction({params,request}) {
 } else if( data.type === "editedtask") {
 
     try {
-        const response = await axios.post(`http://localhost:4000/${param}/task/${taskid}/edit`,data,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/${param}/task/${taskid}/edit`,data,{
             withCredentials:true,
             headers:{
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -73,7 +73,7 @@ export async function taskAction({params,request}) {
 } else if(data.type === "delete") {
 
     try {
-        const response = await axios.post(`http://localhost:4000/${param}/task/${taskid}/delete`,data,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/${param}/task/${taskid}/delete`,data,{
             withCredentials:true,
             headers:{
                 "Content-Type": "application/x-www-form-urlencoded",

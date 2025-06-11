@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import topicimg from "../../assets/icons/topic.svg";
 
+
 export default function Sidebar() {
 
 let location = useLocation();
@@ -24,7 +25,7 @@ useEffect(() => {
 
   const verifier =  async (patharr) => {
     try {
-        const response = await axios.post("http://localhost:4000/timerverify",{pathname:patharr},{withCredentials:true, headers:{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/timerverify`,{pathname:patharr},{withCredentials:true, headers:{
             "Content-Type": "application/json",
         }});
         if(response.data.sucess) {

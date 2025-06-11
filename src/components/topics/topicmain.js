@@ -6,7 +6,7 @@ import {Form,redirect,useLoaderData,useNavigation,useRevalidator} from "react-ro
 export async function topicLoader() {
     
     try {
-        const response = await axios.get("http://localhost:4000/topics",{withCredentials:true});
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/topics`,{withCredentials:true});
         return response.data;
     }
     catch (err) {
@@ -21,7 +21,7 @@ export async function newtopicAction({params,request}) {
     const data = Object.fromEntries(formdata.entries());
     
     try {
-        const response = await axios.post("http://localhost:4000/newtopic",data,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/newtopic`,data,{
             withCredentials:true,
             headers:{
                 "Content-Type": "application/x-www-form-urlencoded",

@@ -7,7 +7,7 @@ export async function overviewLoader({params,request}) {
   const param = params.topicid;
   
   try {
-   const response = await axios.get(`http://localhost:4000/topics/${param}/overview`,{
+   const response = await axios.get(`${process.env.REACT_APP_API_URL}/topics/${param}/overview`,{
       withCredentials:true,
    });
    return response.data;
@@ -26,7 +26,7 @@ export async function overviewAction({params,request}) {
 
 try {
 
-   const response = await axios.post(`http://localhost:4000/${param}/overview`,data,{
+   const response = await axios.post(`${process.env.REACT_APP_API_URL}/${param}/overview`,data,{
       withCredentials:true,
       headers:{
          "Content-Type": "application/x-www-form-urlencoded",

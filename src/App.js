@@ -8,7 +8,7 @@ import Navigation from './components/homepage/navigation.js';
 export async function appLoader() {
 
   try {
-    const response = await axios.get('http://localhost:4000/sessionactive',{withCredentials:true});
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/sessionactive`,{withCredentials:true});
     return response.data;
   }
   catch(err) {
@@ -19,7 +19,7 @@ export async function appLoader() {
 export async function appAction() {
  
   try {
-    const response = await axios.post("http://localhost:4000/logout",{},{withCredentials:true, headers:{
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/logout`,{},{withCredentials:true, headers:{
       "Content-Type": "application/x-www-form-urlencoded",
   }});
     return redirect("/");

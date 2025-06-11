@@ -102,7 +102,7 @@ export default function Timer() {
 
        const sendata = async (data) => {
                 try {
-                    const response = await axios.post("http://localhost:4000/timerdata",{data:data},{withCredentials:true,header:{
+                    const response = await axios.post(`${process.env.REACT_APP_API_URL}/timerdata`,{data:data},{withCredentials:true,header:{
                         "Content-Type": "application/json",
                     }});
                 }

@@ -7,7 +7,7 @@ import axios from 'axios';
 export async function cardsLoader({params,request}) {
 
   try {
-    const response = await axios.get(`http://localhost:4000/topics/${params.topicid}/card`,{withCredentials:true});
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/topics/${params.topicid}/card`,{withCredentials:true});
     return response.data;
   }
   catch(err) {
@@ -23,7 +23,7 @@ export async function cardsAction({params,request}) {
 if(data.type === "newcard")
 {
 try {
-  const response = await axios.post(`http://localhost:4000/${params.topicid}/newcard`,data,{withCredentials:true,
+  const response = await axios.post(`${process.env.REACT_APP_API_URL}/${params.topicid}/newcard`,data,{withCredentials:true,
    headers:{
     "Content-Type": "application/x-www-form-urlencoded"
    }
@@ -37,7 +37,7 @@ catch (err) {
 else if(data.type === "cardedit") {
 
   try {
-    const response = await axios.post(`http://localhost:4000/${params.topicid}/cards/${data.id}/edit`,data,{withCredentials:true,
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/${params.topicid}/cards/${data.id}/edit`,data,{withCredentials:true,
      headers:{
       "Content-Type": "application/x-www-form-urlencoded"
      }
@@ -52,7 +52,7 @@ else if(data.type === "cardedit") {
 else if(data.type === "Cardelete") {
 
   try {
-    const response = await axios.post(`http://localhost:4000/${params.topicid}/cards/${data.id}/delete`,data,{withCredentials:true,
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/${params.topicid}/cards/${data.id}/delete`,data,{withCredentials:true,
      headers:{
       "Content-Type": "application/x-www-form-urlencoded"
      }

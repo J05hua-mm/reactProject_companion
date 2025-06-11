@@ -13,7 +13,7 @@ export async function loginAction({ params, request }) {
         if(data.type === "login") {
 
         try {
-            const response = await axios.post("http://localhost:4000/login",{username:data.email,password:data.password},{
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`,{username:data.email,password:data.password},{
             withCredentials:true,
             headers: {
             "Content-Type": "application/x-www-form-urlencoded", // Explicitly set content type
@@ -33,7 +33,7 @@ export async function loginAction({ params, request }) {
          }
 
           try {
-            const response = await axios.post("http://localhost:4000/signup",data,{
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`,data,{
             withCredentials:true,
             headers: {
             "Content-Type": "application/x-www-form-urlencoded", // Explicitly set content type
