@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# COMPANION APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About 
 
-## Available Scripts
+**Companion** is a productivity web app built using React. It is designed to support learners by combining note-taking, task tracking, and timers with structured ways to connect concepts they study.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User authentication
+- Create topics and set deadlines
+- Create task lists for each topic
+- Create notes for each topic and link them to other notes for conceptual connections
+- Timers with music to keep track of time spent on each topic
+- Responsive design
+- MongoDB integration for user data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshot
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![companion app homepage](src/assets/scrnshots/homepage.png);
+![companion app topic section](src/assets/scrnshots/overview.png);
+![companion app topic overview](src/assets/scrnshots/overview.png);
 
-### `npm test`
+## Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### frontend
 
-### `npm run build`
+- React.js
+- React Router DOM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Express.js
+           
+### Database
 
-### `npm run eject`
+- MongoDB Atlas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Others
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Passport.js
+- Mongoose
+- Axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ ### Prerequsties
 
-## Learn More
+  - Node.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - npm or yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - mongoDB Atlas
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the frontend repository**
 
-### Analyzing the Bundle Size
+git clone https://github.com/J05hua-mm/reactProject_companion.git
+cd reactProject_companion
+npm install
+npm start
+Clone the backend repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Clone the backend repository**
 
-### Making a Progressive Web App
+git clone https://github.com/J05hua-mm/backend_companion.git
+cd backend_companion
+npm install
+node server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Environment variable
 
-### Advanced Configuration
+In the frontend, create a .env file with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- REACT_APP_API_URL = "your_backend_api_url_here"
 
-### Deployment
+This defines the backend route for your project since the frontend and backend are in separate repositories.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Future Improvements
 
-### `npm run build` fails to minify
+- Loading spinners for user feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Dashboard for quick overviews
+
+- Improved UI/UX with polished styles and themes
+
