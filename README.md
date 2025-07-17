@@ -16,9 +16,9 @@
 
 ## Screenshot
 
-![companion app homepage](src/assets/scrnshots/homepage.png);
-![companion app topic overview](src/assets/scrnshots/topic_section.png);
-![companion app topic section](src/assets/scrnshots/overview.png);
+![companion app homepage](src/assets/scrnshots/homepage.png)
+![companion app topic overview](src/assets/scrnshots/topic_section.png)
+![companion app topic section](src/assets/scrnshots/overview.png)
 
 
 ## Tech stack
