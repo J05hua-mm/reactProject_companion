@@ -12,6 +12,7 @@ import Tasks, { taskAction, taskLoader } from "./components/tasks/taskbar.js";
 import Notes, {cardsAction,cardsLoader} from "./components/notes/notesbar.js";
 import axios from "axios";
 import Welcome from './components/homepage/welcome.js';
+import Spinner from './components/spinners/loadingspinner.js';
 
 
 const router = createBrowserRouter([
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} fallbackElement={<Spinner/>}/>
   </React.StrictMode>
 );
 

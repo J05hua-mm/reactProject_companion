@@ -1036,3 +1036,43 @@ font-size: 1rem;
   display:flex;
   justify-content: center;
 }
+
+.spinner-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width:100vw;
+  background-color: rgba(0,0,0,0.1)
+}
+
+
+.spinner-div {
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap:30px;
+}
+
+.spinner {
+  height:30px;
+  width:30px;
+  /* background-color: blue; */
+  border-style: dotted;
+  border-width:7px;
+  border-color:black;
+  border-radius: 100%;
+  animation-name:spinnerr;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+  align-self: center;
+}
+
+.spinner-text {
+  align-self: center;
+}
+
+@keyframes spinnerr {
+from {transform: rotate(0deg);}
+to {transform:rotate(360deg);}
+}
