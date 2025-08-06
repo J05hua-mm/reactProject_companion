@@ -1,9 +1,10 @@
 import './App.css';
 import Sidebar from './components/homepage/sidebar.js';
-import { Outlet,useLoaderData,redirect,Link,useLocation } from 'react-router-dom';
+import { Outlet,useLoaderData,redirect,Link,useLocation,useNavigation } from 'react-router-dom';
 import axios from 'axios';
 import { createContext, useEffect, useState} from 'react';
 import Navigation from './components/homepage/navigation.js';
+import Spinner2 from "./components/spinners/outletSpinner.js"
 
 export async function appLoader() {
 
@@ -36,6 +37,7 @@ function App() {
 
 const response = useLoaderData();
 console.log(response);
+const navigation = useNavigation();
 
 
   return (
@@ -52,6 +54,7 @@ console.log(response);
         </div>
 
         <div className='main-frame-div-two-two'>
+          {navigation.state === "loading" && <Spinner2/>}
         <Outlet/>
         </div>
        
